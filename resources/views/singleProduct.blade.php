@@ -7,20 +7,32 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>webCrawlerLaravel</title>
     </head>
+    <style>
+        @font-face {
+            font-family: 'Yekan';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Yekan'), url('./fonts/yekan.woff') format('woff');
+        }
+    </style>
     <body>
         <header>
             <nav class="navbar navbar-expand-lg bg-white d-flex justify-content-between">
                     <div>
                        <a class="navbar-brand" href="#">Mahdi-Zahrani</a>
-                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse"
+                               data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                               aria-expanded="false" aria-label="Toggle navigation"
+
+                       >
                            <span class="navbar-toggler-icon"></span>
                        </button>
                     </div>
                 <div>
                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                        <form class="form-inline my-2 my-lg-0">
-                           <input class="form-control mr-sm-2" type="search" placeholder="Search product Id like dkp-90825">
-                           <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">
+                           <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search product Id like dkp-90825">
+                           <button class="btn btn-outline-success my-2 my-sm-0 " id="searchSubmit">
                               Search
                            </button>
                        </form>
@@ -43,20 +55,19 @@
                     <div class="product d-flex">
                         <section class="product_picture">
                             <div class="text-center">
-                                <img src="https://dkstatics-public.digikala.com/digikala-products/4853607.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_80"
-                                     alt="">
+                                <img  alt="" id="pro_image">
                             </div>
                         </section>
                         <section class="content d-flex justify-content-between w-100">
                            <div class="content-title">
-                               <h4 class="h4 mr-2 yekan-font font-weight-bold">
-                                   کیف لپ تاپ کیس لاجیک مدل Top Loading VNAI-215 مناسب برای لپ تاپ 15.6 اینچی
+                               <h4 class="h4 mr-2 yekan-font font-weight-bold" id="title">
+
                                </h4>
                            </div>
                             <div class="content-price ">
                                 <div class="price">
                                     <p class="label yekan-font h6 text-right mr-3 mt-3">قیمت فروشنده</p>
-                                    <p class="seller text-danger yekan-font h3 mt-5 ml-3">300,000 تومان</p>
+                                    <p class="seller text-danger yekan-font h3 mt-5 ml-3" id="price"></p>
                                 </div>
                             </div>
                         </section>
@@ -66,5 +77,6 @@
         </main>
 
     <script src="{{ asset('js/app.js') }}" ></script>
+    <script src="{{ asset('js/store.js') }}" ></script>
     </body>
 </html>
