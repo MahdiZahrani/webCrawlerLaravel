@@ -1,4 +1,4 @@
-ID FORMAT FOR Search Products :
+Please Search id like :
 
 dkp-90897
 dkp-90896
